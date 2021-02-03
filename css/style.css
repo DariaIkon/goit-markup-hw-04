@@ -129,7 +129,6 @@ a.webstudio-logo-header {
     margin-right: 10px;
     fill: var(--gray-color);
 }
-
 .studio-contacts-link:hover svg,
 .studio-contacts-link:focus svg {
     fill: var(--blue-color);
