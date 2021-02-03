@@ -114,21 +114,25 @@ a.webstudio-logo-header {
     align-items: center;
     margin: 0 auto;
 }
+.studio-contacts-link {
+    display: flex;
+}
 .studio-contacts-icon-mail {
     width: 16px;
     height: 12px;
     margin-right: 10px;
+    fill: var(--gray-color);
 }
 .studio-contacts-icon-phone {
     width: 11px;
     height: 17px;
     margin-right: 10px;
+    fill: var(--gray-color);
 }
 
-.studio-contacts-item:hover svg,
-.studio-contacts-item:focus svg {
-    color: var(--blue-color);
-
+.studio-contacts-link:hover svg,
+.studio-contacts-link:focus svg {
+    fill: var(--blue-color);
 }
 /* /header */
 
@@ -150,7 +154,7 @@ a.webstudio-logo-header {
       to right,
       rgba(47, 48, 58, 0.4),
       rgba(47, 48, 58, 0.4)),
-    url("../images/Overlay.png");
+    url("../images/Overlay.jpg");
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center; 
@@ -370,15 +374,12 @@ ul.team-list p {
     box-sizing: border-box;
     border-radius: 4px;
     margin: 0 auto;
-    fill: var(--fill-gray-color); 
+    fill: var(--fill-gray-color);
 }
-
-.clients-logo:hover ,
-.clients-logo:focus {
-    color: var(--blue-color);
-}
-.clients-logo {
-    display: block;  
+.clients-item-logos:hover,
+.clients-item-logos:focus {
+    border: 1px solid  var(--blue-color);
+    fill: var(--blue-color);
 }
 .clients-logo-1 {
     width: 44px;
@@ -443,6 +444,7 @@ ul.team-list p {
     color: var(--link-gray-color); 
 }
 .address {
+    font-style: normal;
     font-weight: normal;
     line-height: 1.714;
     letter-spacing: 0.03em;
@@ -469,6 +471,9 @@ ul.team-list p {
 .footer-list-link {
     display: flex;
     margin-left: 70px;
+}
+.footer-list-link li:not(:last-child) {
+    margin-right: 10px;
 }
 .footer-item-link {
     display: flex;
@@ -591,6 +596,14 @@ ul.team-list p {
 .box-portfolio {
     background-color: var(--main-light-color);
     border: 1px solid var(--light-gray-color);
+ }
+ .box-portfolio:hover,
+ .box-portfolio:focus {
+    border: 1px solid #EEEEEE;
+    box-sizing: border-box;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 
+                0px 4px 4px rgba(0, 0, 0, 0.06), 
+                1px 4px 6px rgba(0, 0, 0, 0.16);
  }
 .portfolio-text-card {
     padding-top: 24px;
