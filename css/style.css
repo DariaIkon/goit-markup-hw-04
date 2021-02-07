@@ -116,6 +116,7 @@ a.webstudio-logo-header {
 }
 .studio-contacts-link {
     display: flex;
+    align-items: center;
 }
 .studio-contacts-icon-mail {
     width: 16px;
