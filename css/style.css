@@ -18,6 +18,7 @@ body {
     font-style: normal;   
     font-size: 14px;
 }
+
 /*==== COMPONENTS ====*/
 .list-no-style {
     list-style: none;
@@ -116,7 +117,8 @@ a.webstudio-logo-header {
 }
 .studio-contacts-link {
     display: flex;
-    align-items: center;
+    
+    
 }
 .studio-contacts-icon-mail {
     width: 16px;
@@ -414,6 +416,11 @@ ul.team-list p {
     padding-top: 60px;
     padding-bottom: 60px;
 }
+.footer-list {
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+}
 .logo {
     margin-bottom: 20px;
 }
@@ -454,10 +461,20 @@ ul.team-list p {
 .webstudio-white {
     color: var(--main-light-color);
 }
-.footer-list {
+
+.footer-list-icons {
     display: flex;
 }
-.footer-headline-connect {
+.footer-item-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+.footer-connect {
+    margin-left: 70px;
+}
+.footer-connect-headline-text {
     font-family: Roboto;
     font-weight: bold;
     font-size: 14px;
@@ -465,19 +482,16 @@ ul.team-list p {
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: var(--main-light-color);
-    margin-left: 70px;
+    margin: 0;
     margin-bottom: 20px;
 }
-.footer-list-link {
+.footer-list-icons {
     display: flex;
-    margin-left: 70px;
 }
-.footer-list-link li:not(:last-child) {
+.footer-list-icons li:not(:last-child) {
     margin-right: 10px;
 }
-.footer-item-link {
-    display: flex;
-}
+
 .footer-icon-link {
     display: flex;
     justify-content: center;
@@ -507,7 +521,7 @@ ul.team-list p {
 .portfolio {
     display: flex;
     margin: 0 auto;
-    margin-top: 99px;
+    margin-top: 94px;
 }
 
 /* button */
@@ -567,8 +581,14 @@ ul.team-list p {
 {
     color: var(--main-light-color);
     background-color: var(--blue-color);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1),
+                0px 1px 2px rgba(0, 0, 0, 0.08),
+                0px 2px 2px rgba(0, 0, 0, 0.12);
 }
  /* menu */
+.header-portfolio {
+    border: 1px solid #ECECEC
+ }
 .menu-portfolio {
     display: flex;
     align-items: center;
