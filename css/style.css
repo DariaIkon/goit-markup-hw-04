@@ -17,6 +17,7 @@ body {
     font-weight: 500;
     font-style: normal;   
     font-size: 14px;
+    box-sizing: border-box;
 }
 
 /*==== COMPONENTS ====*/
@@ -116,9 +117,7 @@ a.webstudio-logo-header {
     margin: 0 auto;
 }
 .studio-contacts-link {
-    display: flex;
-    
-    
+    display: flex;   
 }
 .studio-contacts-icon-mail {
     width: 16px;
@@ -158,7 +157,7 @@ a.webstudio-logo-header {
       rgba(47, 48, 58, 0.4)),
     url("../images/Overlay.jpg");
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
     background-position: center; 
 }  
 .studio-top-box {
@@ -238,7 +237,6 @@ a.webstudio-logo-header {
     margin: 0;
     margin-bottom: 10px;
 }
-
 .main-info-text {
     font-weight: normal;
     line-height: 1.714;
@@ -412,15 +410,17 @@ ul.team-list p {
 /* footer */
 .footer {
     display: flex;
+    margin: 0 auto;
+    align-items: center;
     background-color: var(--bg-dark-color);
     padding-top: 60px;
     padding-bottom: 60px;
 }
-.footer-list {
+/*.footer-list {
     display: flex;
     margin: 0 auto;
-    align-items: center;
-}
+    
+}*/
 .logo {
     margin-bottom: 20px;
 }
@@ -461,57 +461,38 @@ ul.team-list p {
 .webstudio-white {
     color: var(--main-light-color);
 }
-
-.footer-list-icons {
-    display: flex;
-}
-.footer-item-link {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
-}
-.footer-connect {
-    margin-left: 70px;
-}
-.footer-connect-headline-text {
+.footer-connect h3 {
     font-family: Roboto;
     font-weight: bold;
     font-size: 14px;
     line-height: 16px;
     letter-spacing: 0.03em;
     text-transform: uppercase;
-    color: var(--main-light-color);
-    margin: 0;
-    margin-bottom: 20px;
+    color: #FFFFFF;
 }
-.footer-list-icons {
-    display: flex;
-}
-.footer-list-icons li:not(:last-child) {
-    margin-right: 10px;
-}
-
-.footer-icon-link {
+.footer-item-icon {
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
     width: 44px;
     height: 44px;
-    background: rgba(255, 255, 255, 0.1);
-    box-shadow: 0px 4px 4px 
-              rgba(0, 0, 0, 0.25);
-    }
-.footer-item-link svg {
+    margin-top: 16px;
+}
+.footer-icon {
     fill: var(--main-light-color);
     width: 20px;
-    height: 20px;   
-  }
-.footer-icon-link:hover,
-.footer-icon-link:focus {
+    height: 20px;
+}
+.footer-list-icons {
+    display: flex;
+}
+.footer-item-icon:hover,
+.footer-item-icon:focus {
     background-color: var(--blue-color);
 }
+
   /* / footer */
 
 /*=== /PAGE for STUDIO ===*/
@@ -522,6 +503,9 @@ ul.team-list p {
     display: flex;
     margin: 0 auto;
     margin-top: 94px;
+}
+.header-portfolio {
+    border: 1px solid #ECECEC;
 }
 
 /* button */
@@ -586,9 +570,7 @@ ul.team-list p {
                 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
  /* menu */
-.header-portfolio {
-    border: 1px solid #ECECEC
- }
+
 .menu-portfolio {
     display: flex;
     align-items: center;
@@ -598,18 +580,16 @@ ul.team-list p {
  }
 .container-card {
     margin-left: 0;
-    margin-right: 0; 
+    margin-right: 0;   
 }
 .menu-list-portfolio {
-    padding: 0;
-    margin: 0;
     display: flex;
     flex-wrap: wrap;
-    margin-right: calc(-1*var(--indent-portfolio));
-    margin-bottom: calc(-1*var(--indent-portfolio));
+    margin-right: calc(-1 * var(--indent-portfolio));
+    margin-bottom: calc(-1 * var(--indent-portfolio));
 }
 .menu-list-portfolio li{
-    flex-basis: calc(100% / 3 -30px);
+    flex-basis: calc(100% / 3 - var(--indent-portfolio));
     margin-right: var(--indent-portfolio);
     margin-bottom: var(--indent-portfolio);
 }
@@ -617,8 +597,8 @@ ul.team-list p {
     background-color: var(--main-light-color);
     border: 1px solid var(--light-gray-color);
  }
- .box-portfolio:hover,
- .box-portfolio:focus {
+ .box-portfolio-link:hover,
+ .box-portfolio-link:focus {
     border: 1px solid #EEEEEE;
     box-sizing: border-box;
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 
